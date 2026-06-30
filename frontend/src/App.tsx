@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTasks } from './hooks/useTasks';
 import { TaskForm } from './components/TaskForm';
 import { TaskList } from './components/TaskList';

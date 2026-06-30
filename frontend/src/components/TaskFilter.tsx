@@ -1,4 +1,3 @@
-import React from 'react';
 import { TaskFilter } from '../types';
 
 interface TaskFilterProps {
