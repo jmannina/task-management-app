@@ -1,6 +1,6 @@
 # GitHub Submission Guide
 
-This project is ready to be pushed to a GitHub repository. Follow these steps:
+This project is ready to be pushed to a GitHub repository with **automatic GitHub Pages deployment**. Follow these steps:
 
 ## Step 1: Create a GitHub Repository
 
@@ -34,12 +34,38 @@ git push -u origin main
 
 **Replace `YOUR_USERNAME` with your actual GitHub username.**
 
-## Step 3: Verify on GitHub
+## Step 3: Enable GitHub Pages
+
+After your first push:
+
+1. Go to your repository settings: `https://github.com/YOUR_USERNAME/task-management-app/settings/pages`
+2. Under "Build and deployment":
+   - Source: Select **Deploy from a branch**
+   - Branch: Select **gh-pages** (will be created automatically by GitHub Actions)
+   - Folder: **/ (root)**
+3. Click **Save**
+
+The GitHub Actions workflow will automatically:
+- Build the React frontend when you push changes
+- Deploy to GitHub Pages
+- Create/update the `gh-pages` branch
+
+## Step 4: Access Your App
+
+Once deployment completes (check the Actions tab), your app will be live at:
+```
+https://YOUR_USERNAME.github.io/task-management-app/
+```
+
+The yellow/blue notification in your repo settings confirms deployment status.
+
+## Step 5: Verify on GitHub
 
 1. Go to your new repository URL: `https://github.com/YOUR_USERNAME/task-management-app`
-2. Verify all files are present
-3. The README should display nicely
-4. You should see 27 files committed
+2. Verify all files are present (including `.github/workflows/deploy.yml`)
+3. Click the **Actions** tab to see build progress
+4. Once the green checkmark appears, visit your GitHub Pages URL
+5. You should see the Task Manager app running!
 
 ## Step 4: Share the Link
 
